@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html lang="{{ entry.lang if entry else conf.lang }}">
+<head>
+  {% block head -%}
+  <meta charset="utf-8" />
+  <title>SC "Plant ANKER": {% block title %}{% endblock %}</title>
+  <link media="all" href="{{ env.path + '/style.css' }}" rel="stylesheet" />
+  <link href="/favicon.ico" rel="shortcut icon" />
+    {% if 'sitemap' in env.views -%}
+        <link href="{{ env.views.sitemap.path }}" type="application/xml" rel="sitemap" title="Sitemap">
+    {%- endif%}
+  <link href="{{ env.path + '/' }}" rel="home start" />
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  {%- endblock %}
+</head>
+<body bgcolor=white> <center><a name=verh></a>
+
+<table border=0 cellspacing=0 cellpadding=0>
+<tr>
+  <td align=left colspan=4><a href=http://www.anker.ru/>
+<img src=/icons/small_logo.gif width=75 height=65 alt="Start page" border=0></a><img src=/icons/relizy_header_en.gif width=453 height=65 alt="Company Info"></td>
+  <td width=1 rowspan=2 bgcolor=silver>
+     <img src=/icons/1.gif width=1 height=1>
+  </td>
+</tr>
+<tr>
+  <td valign=top>
+<img src=/icons/navbar_space.gif width=75 height=30 border=0><br>
+<img src=/icons/navbar_smallpic_1.gif width=75 height=46><br>
+<img src=/icons/navbar_end.gif width=75 height=27>
+  </td> 
+  <td width=10>&nbsp;</td>
+  <td valign=top width=425>
+
+
+
+
+<font size=2>
+<p><font color="013220">
+  {%- block content -%}
+  {%- endblock -%}
+  
+  <footer>
+    {% block footer %}
+    <a href="{{ env.path + '/pr_eng/articles/' }}" rel="contents"><p align='center'><font color='#102152' font size=2><b>Articles</b></font></p></a></li>
+<a href="{{ env.path + '/pr_eng/' }}" rel="home start" class="blogtitle"><p align='center'><font size=2 font color='#102152'>{{ " Go to the first news" }}</p></a>
+    {% endblock %}
+  </footer>
+  </td>
+  <td></td>
+</tr>
+</table>
+<br><br>
+
+<table border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=bottom><a href=quality_en.html><img src=/icons/navbar_leftarrow.gif width=46 height=35 alt="Previous page" border=0></a><a href=contact_en.html><img src=/icons/navbar_rightarrow.gif width=46 height=35 alt="Next page" border=0></a><a href=http://www.anker.ru/><img src=/icons/navbar_pervstran_en.gif width=61 height=21 alt="Main page" border=0></a><a href=company_info_en.html><img src=/icons/navbar_okompanii_en.gif width=77 height=21 alt="Company info" border=0></a><a href=production_en.html><img src=/icons/navbar_proekty_en.gif width=64 height=21 alt=Production border=0></a><a href=quality_en.html><img src=/icons/navbar_produktsiya_en.gif width=46 height=21 alt=Quality border=0></a><img src=/icons/navbar_relizy_en.gif width=37 height=21 alt=News border=0><a href=contact_en.html><img src=/icons/navbar_kontakti_en.gif width=49 height=21 alt=Contacts border=0></a><a href=#verh><img src=/icons/navbar_uparrow.gif width=95 height=35 alt="Top page" border=0></a></td></tr>
+</table>
+</center>
+</body>
+</HTML>
