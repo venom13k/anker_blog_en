@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ conf.sitename }} – Artikelübersicht{% endblock %}
+{% block title %}{{ conf.sitename }} – Plant ANKER {% endblock %}
 
 {% block content %}
 <article>
@@ -13,11 +13,9 @@
          	{% endif %}
             </tr>
 
-            {% for entry in month.items %}
+           {% for entry in month.items %}
                 <tr>
-                    <th align=left valign=top><font size=2>{{ month.full ~ ', ' ~ entry.date.day }}-е</th>
-		    
-                    <tr><td><a href="{{ entry.permalink }}"><font size=2><font color="102152">{{ entry.title | e }}</a></td></tr>
+                    <td align=left valign=top><a href="{{ entry.permalink }}"><font size=2><font color="102152">{{ month.full ~ ', ' ~ entry.date.day }}-е</a></td>
                 </tr>
             {% endfor %}
         {% endfor %}
